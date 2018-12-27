@@ -59,7 +59,7 @@
 
     var person1 = {
         [ f+n ] : "Liu",
-        [ s+h ](){
+        [ s+h ]() {
             return "你好吗？";
         }
     };
@@ -77,14 +77,14 @@
 
 // Object.assign()函数
 // 将源对象的属性赋值到目标对象上
-    //这个充当目标对象
+    // 这个充当目标对象
     let target = {"a":1};
-    //这个充当源对象
+    // 这个充当源对象
     let origin = {"b":2,"c":3};
     Object.assign(target,origin);
-    //打印target对象出来看一下
+    // 打印target对象出来看一下
     console.log(target);
-    //结果 {a: 1, b: 2, c: 3}
+    // 结果 {a: 1, b: 2, c: 3}
 
 // Object.getPrototypeOf( )函数
 // 获取一个对象的prototype属性。这里的对象我们用一个自定义类实例出来的对象来演示
@@ -92,20 +92,20 @@
     function Person(){
 
     }
-    //函数都有一个预属性prototype对象
+    // 函数都有一个预属性prototype对象
     Person.prototype = {
         //给prototype对象添加一个say方法
-        say(){
+        say() {
             console.log('hello');
         }
     };
-    //实例化Person对象，赋值给变量lisi
+    // 实例化Person对象，赋值给变量lisi
     let lisi = new Person();
-    //调用类的say方法
+    // 调用类的say方法
     lisi.say();
-    //结果：打印出hello
+    // 结果：打印出hello
 
-    //获取lisi对象的prototype属性
+    // 获取lisi对象的prototype属性
     console.log(Object.getPrototypeOf(lisi));
     // 结果：打印{say:[Function: say]}
 
@@ -132,7 +132,7 @@
     };
 
     Object.setPrototypeOf(obj, proto);
-    console.log(obj.find()) // "hello"
+    console.log(obj.find()); // "hello"
 
 // Object.keys()函数，Object.values()函数，Object.entries()函数
 // Object.values方法返回一个数组
